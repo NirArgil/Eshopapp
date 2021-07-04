@@ -99,6 +99,9 @@ button.block {
   width: 100%;
 }
 
+button.small {
+  font-size: 1.2rem;
+}
 a.brand {
   color: #ffffff;
   font-size: 3rem;
@@ -216,6 +219,11 @@ border-radius: 0.5rem;
   background-color: #ffe0e0e0;
 }
 
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
 .form {
   max-width: 60rem;
   margin: 0 auto;
@@ -266,6 +274,22 @@ border-radius: 0.5rem;
   color: #f08000;
 
 }
-.step1 {
 
+.table { 
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+
+.table td, .table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+
+.table button {
+  margin: 0 0.2rem;
 }
