@@ -9,7 +9,7 @@ const data = {
             isAdmin: true,
         },
         {
-            name: 'Johnny',
+            name: 'Johnn',
             email: 'user@eee.com',
             password: bcrypt.hashSync('1234', 8),
             isAdmin: false,
@@ -17,7 +17,7 @@ const data = {
     ],
     products: [
         {
-            name: 'Nike slim short',
+            name: 'Nike1 slim short',
             category: 'Shirts',
             image: '/images/p1.jpg',
             price: 120,
@@ -29,7 +29,7 @@ const data = {
         },
 
         {
-            name: 'Adidas slim pants',
+            name: 'qwe slim pants',
             category: 'Shirts',
             image: '/images/p2.jpeg',
             price: 100,
@@ -87,6 +87,7 @@ const data = {
             numReviews: 75,
             description: 'high quality product',
         },
+
     ],
 };
 

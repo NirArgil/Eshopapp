@@ -32,7 +32,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <Link className="brand" to="/">amazona1</Link>
+            <Link className="brand" to="/">Eshop</Link>
           </div>
           <div>
             <Link to="/cart">
