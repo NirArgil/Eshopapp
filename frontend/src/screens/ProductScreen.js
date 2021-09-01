@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line
 import Product from '../components/Product';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
