@@ -95,6 +95,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     try {
+        // eslint-disable-next-line
       const { data } = Axios.delete(`/api/products/${productId}`, {
         headers: { Authorization: `Bearer ${userInfo.token}` },
       });
@@ -106,7 +107,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
         error.response && error.response.data.message
           ? error.response.data.message
           : error.message;
-          
+
       dispatch({ type: PRODUCT_DELETE_FAIL, payload: message });
     }
   };
