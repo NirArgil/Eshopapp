@@ -36,7 +36,7 @@ function App() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <Link className="brand" to="/">Eshop</Link>
+            <Link className="brand" to="/">NirEshop</Link>
           </div>
           <div>
             <Link to="/cart">
@@ -112,7 +112,7 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
 
         </main>
-        <footer className="row center">All right reserved</footer>
+        <footer className="row center">All right reserved Nir Argil</footer>
       </div>
     </BrowserRouter>
   );
