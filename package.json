@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd frontend && npm install",
+    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build",
     "build": "cd frontend &&  npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
