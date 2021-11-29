@@ -17,7 +17,7 @@ import {
   PRODUCT_DELETE_SUCCESS,
 } from "../constants/productConstants";
 
-const backendUrl = "https://eshopserve.herokuapp.com/";
+const backendUrl = "https://eshopserve.herokuapp.com";
 
 export const listProducts = () => async (dispatch) => {
     dispatch({
