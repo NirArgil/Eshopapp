@@ -16,7 +16,7 @@ import {
 } from "../constants/userConstants"
 
 
-const backendUrl = "https://eshopserve.herokuapp.com";
+const backendUrl = "eshopserve.herokuapp.com";
 
 export const register = (name, email, password) => async (dispatch) => {
     dispatch({ type: USER_REGISTER_REQUEST, payload: { email, password } });
