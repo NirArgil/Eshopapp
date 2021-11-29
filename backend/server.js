@@ -5,9 +5,13 @@ import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import path from 'path';
 import uploadRouter from './routers/uploadRouter.js';
+import dotenv from 'dotenv'
 
-// dotenv.config();
+dotenv.config();
+const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true, 
@@ -15,10 +19,7 @@ mongoose.connect(process.env.MONGODB_URL, {
     useCreateIndex: true,
 }).catch(() => console.log("mongo error"));
 
-const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
