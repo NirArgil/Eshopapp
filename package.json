@@ -5,9 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && npm run build",
+  
     "postinstall": "cd frontend && npm install",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+    "build": "rd /s /q dist && babel backend -d dist && cd frontend && npm install && npm run build",
+    "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/NirArgil/Eshopapp#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
@@ -33,5 +36,8 @@
     "eslint-plugin-react": "^7.24.0",
     "nodemon": "^2.0.7"
   },
-  "engines": {"node":"14.17.3", "npm": "6.14.13"}
+  "engines": {
+    "node": "14.17.3",
+    "npm": "6.14.13"
+  }
 }
