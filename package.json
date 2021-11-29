@@ -5,8 +5,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  
-    "postinstall": "cd frontend && npm install",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
     "build": "rd /s /q dist && babel backend -d dist && cd frontend && npm install && npm run build",
     "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
