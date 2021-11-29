@@ -17,12 +17,14 @@ import {
   PRODUCT_DELETE_SUCCESS,
 } from "../constants/productConstants";
 
+const backendUrl = "https://eshopserve.herokuapp.com/";
+
 export const listProducts = () => async (dispatch) => {
     dispatch({
         type: PRODUCT_LIST_REQUEST
     });
     try {
-        const { data } = await Axios.get('/api/products');
+        const { data } = await Axios.get(`${backendUrl}/api/products`);
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     } catch (error) {
         dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
